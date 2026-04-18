@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Book Appointment</title>
+<link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+<header class="header">
+    📅 Book Appointment
+</header>
+
+<div class="container center-wrapper">
+
+    <div class="card book-card">
+
+        <h3>Book Appointment</h3>
+
+        <select id="doctor" class="input">
+            <option value="">Select Doctor</option>
+        </select>
+
+        <input type="date" id="date" class="input">
+        <input type="time" id="time" class="input">
+
+        <button class="primary-btn" onclick="bookAppointment()">
+            Book Appointment
+        </button>
+
+    </div>
+
+</div>
+
+<div class="bottom-nav">
+    <button onclick="goHome()">Home</button>
+    <button class="active">Book</button>
+    <button onclick="goToAppointments()">Appointments</button>
+</div>
+
+</div>
+
+<script src="../js/patient.js"></script>
+<div id="toast" class="toast"></div>
+</body>
+</html>

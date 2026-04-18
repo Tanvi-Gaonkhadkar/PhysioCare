@@ -1,0 +1,485 @@
+* {
+    box-sizing: border-box;
+}
+
+/* RESET */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2f7, #e3f6f5);
+}
+
+/* APP WRAPPER */
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 420px;
+    margin: auto;
+    background: #dee7e9;
+    box-shadow: 0 0 20px rgba(0,0,0,0.08);
+}
+
+/* CONTAINER */
+.container {
+    flex: 1;
+    padding: 25px;
+}
+
+/* DESKTOP GRID */
+@media (min-width: 768px) {
+    .app {
+        max-width: 100%;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .container {
+        display: block;   /* 🔥 THIS FIXES EVERYTHING */
+        padding: 30px 60px;
+    }
+
+    .header {
+        text-align: left;
+        padding-left: 60px;
+        font-size: 22px;
+    }
+}
+
+/* HEADER */
+.header {
+    background: white;
+    padding: 18px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+/* CARDS */
+.card {
+    
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card p {
+    color: #777;
+    font-size: 14px;
+}
+
+/* BIG TEXT */
+.big-text {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2aa7a0;
+    margin-top: 10px;
+}
+
+/* INPUTS */
+.input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+/* BUTTON */
+.primary-btn {
+    padding: 12px;
+    background: #2aa7a0;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+}
+
+.primary-btn:hover {
+    background: #23918b;
+}
+
+/* ACTION BUTTONS */
+.action-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.action-buttons .primary-btn {
+    width: 200px;
+    height: 120px;
+    font-size: 15px;
+}
+
+/* FILTER BUTTONS */
+.filter-container {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-btn {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.filter-btn.active {
+    background: #2aa7a0;
+    color: white;
+    border: none;
+}
+
+/* PATIENT / APPOINTMENT CARDS */
+.patient-card {
+    background: #f9fafb;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border-left: 4px solid #2aa7a0;
+}
+
+/* APPOINTMENT LIST */
+#appointmentList {
+    margin-top: 10px;
+}
+
+/* BOTTOM NAV */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 12px 0;
+    border-top: 1px solid #eee;
+}
+
+.bottom-nav button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+}
+
+.bottom-nav button.active {
+    color: #2aa7a0;
+    font-weight: bold;
+}
+
+/* CENTER WRAPPER */
+.center-wrapper {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px);
+}
+
+/* BOOK CARD */
+.book-card {
+    width: 450px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 35px;
+    border-radius: 16px;
+}
+
+/* TOAST */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1000;
+}
+
+.toast.show {
+    opacity: 1;
+}
+
+/* LOGIN PAGE */
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #eaeef2, #d8f3f1);
+}
+
+.login-card {
+    background: white;
+    padding: 40px;
+    border-radius: 18px;
+    width: 500px;
+    min-height: 450px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    text-align: center;
+}
+
+.role-select {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.role-select button {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.role-select button.active {
+    background: #2aa7a0;
+    color: white;
+    border: none;
+}
+
+/* 🔥 Filter Buttons Container */
+.filter-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* 🔥 Buttons */
+.filter-btn {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+/* Hover */
+.filter-btn:hover {
+    background: #2aa7a0;
+    color: white;
+    border-color: #2aa7a0;
+}
+
+/* Active Button */
+.filter-btn.active {
+    background: #2aa7a0;
+    color: white;
+    border: none;
+}
+/* 
+.cards-row {
+    display: flex;
+    justify-content: center;   
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+
+.stat-card {
+    width: 300px;
+}
+
+
+.buttons-row {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+} */
+
+
+/* .buttons-row .primary-btn {
+    width: auto;
+    padding: 14px 28px;
+    border-radius: 12px;
+}
+
+.big-text {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2aa7a0;
+    margin-top: 10px;
+} */
+ /* 3 cards row */
+.cards-row {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* equal card size */
+.stat-card {
+    width: 280px;
+}
+
+/* buttons BELOW */
+.buttons-row {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* buttons style */
+.buttons-row .primary-btn {
+    width: auto;
+    padding: 14px 28px;
+    border-radius: 12px;
+}
+/* 🔥 MAKE DASHBOARD FULL SCREEN FRIENDLY */
+
+/* Increase card size */
+.stat-card {
+    width: 320px;
+    min-height: 150px;
+}
+
+/* Spread cards better on large screens */
+@media (min-width: 1024px) {
+    .cards-row {
+        justify-content: space-evenly;
+    }
+}
+
+/* Bigger numbers */
+.big-text {
+    font-size: 36px;
+}
+
+/* Bigger buttons */
+.buttons-row .primary-btn {
+    padding: 16px 32px;
+    font-size: 16px;
+}
+
+/* Add spacing from top */
+.cards-row {
+    margin-top: 40px;
+}
+
+/* Better spacing for buttons */
+.buttons-row {
+    margin-top: 60px;
+}
+/* 🔥 MAKE DASHBOARD USE FULL WIDTH BUT KEEP FLEX LAYOUT */
+
+@media (min-width: 1024px) {
+
+    .cards-row {
+        justify-content: center;   /* center group */
+        gap: 50px;                 /* controlled spacing */
+        padding: 0 40px;           /* small side breathing */
+    }
+
+    .stat-card {
+        width: 360px;              /* slightly bigger */
+        min-height: 180px;
+    }
+
+    .buttons-row {
+        margin-top: 120px;
+        gap: 60px;
+    }
+
+    .buttons-row .primary-btn {
+        width: 240px;
+        height: 65px;
+        font-size: 17px;
+    }
+
+    .stat-card {
+        flex: 1;                          /* take equal space */
+        max-width: 420px;                 /* prevent over stretching */
+    }
+
+    .buttons-row {
+        margin-top: 120px;
+        gap: 80px;
+    }
+
+    .buttons-row .primary-btn {
+        width: 260px;
+        height: 70px;
+        font-size: 18px;
+    }
+}
+/* ================= FINAL DASHBOARD LAYOUT ================= */
+
+/* 3 BIG CARDS ROW */
+.cards-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    padding: 0 40px;
+}
+
+/* BIG CARDS */
+.stat-card {
+    flex: 1;
+    max-width: 450px;
+    height: 50vh;              /* 🔥 HALF PAGE HEIGHT */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* TEXT INSIDE */
+.stat-card h3 {
+    font-size: 20px;
+}
+
+.big-text {
+    font-size: 42px;
+    margin-top: 15px;
+}
+
+/* BUTTONS SECTION */
+.buttons-row {
+    margin-top: 80px;          /* push down */
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+/* BIG BUTTONS */
+.buttons-row .primary-btn {
+    width: 400px;      /* wider */
+    height: 80px;      /* taller */
+    font-size: 20px;   /* bigger text */
+    border-radius: 16px;
+}

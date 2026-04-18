@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appointments</title>
+<link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+<header class="header">
+    📅 Appointments
+</header>
+
+<div class="container">
+
+    <!-- Book Appointment -->
+    <div class="card">
+        <h3>Book Appointment</h3>
+
+        <select class="input" id="patientSelect">
+            <option value="">Select Patient</option>
+        </select>
+
+        <input type="date" class="input" id="date">
+        <input type="time" class="input" id="time">
+
+        <button class="primary-btn" onclick="addAppointment()">Book Appointment</button>
+    </div>
+
+    <!-- Appointment List -->
+    <div class="card">
+        <h3>Appointments</h3>
+        <div id="appointmentList"></div>
+    </div>
+
+</div>
+
+<!-- Bottom Nav -->
+<div class="bottom-nav">
+    <button onclick="goHome()">Home</button>
+    <button class="active">Appointments</button>
+    <button onclick="goToPatients()">Patients</button>
+</div>
+
+</div>
+
+<script src="../js/doctor.js"></script>
+
+</body>
+</html>

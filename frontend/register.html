@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register</title>
+
+<link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+
+<div class="login-container">
+    <div class="login-card">
+
+        <h2>Create Account 📝</h2>
+        <p>Register to continue</p>
+
+        <!-- Role Selection -->
+        <div class="role-select">
+            <button type="button" onclick="selectRole('doctor')" id="doctorBtn">Doctor</button>
+            <button type="button" onclick="selectRole('patient')" id="patientBtn">Patient</button>
+        </div>
+
+        <!-- Inputs -->
+        <input type="text" placeholder="Username" class="input" id="username">
+        <input type="email" placeholder="Email" class="input" id="email">
+        <input type="password" placeholder="Password" class="input" id="password">
+
+        <!-- Register -->
+        <button type="button" class="primary-btn" onclick="register()">Register</button>
+
+        <p style="margin-top:10px;">
+            Already have an account?
+            <a href="index.html">Login</a>
+        </p>
+
+    </div>
+</div>
+
+<script src="js/auth.js"></script>
+
+</body>
+</html>

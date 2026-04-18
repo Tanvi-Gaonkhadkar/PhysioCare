@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Patient Dashboard</title>
+<link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+<header class="header">
+    👤 Patient Dashboard
+</header>
+
+<div class="container">
+
+    <!-- 👤 PROFILE -->
+    <div class="card full-width">
+        <h3>👤 Profile</h3>
+        <p><strong>Name:</strong> <span id="patientName"></span></p>
+        <p><strong>Email:</strong> <span id="patientEmail"></span></p>
+    </div>
+
+    <!-- 📅 UPCOMING APPOINTMENT -->
+    <div class="card full-width">
+        <h3>📅 Upcoming Appointment</h3>
+        <div id="upcomingAppointment">
+            <p style="color:#777;">No upcoming appointments</p>
+        </div>
+    </div>
+
+    <!-- 📊 STATS -->
+    <div class="card">
+        <h3>Total Appointments</h3>
+        <p class="big-text" id="totalCount">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Upcoming</h3>
+        <p class="big-text" id="upcomingCount">0</p>
+    </div>
+
+    <!-- 🔥 ACTION BUTTONS (FIXED) -->
+    <div class="card full-width">
+        <div class="action-buttons">
+            <button class="primary-btn" onclick="goToBook()">📅 Book Appointment</button>
+            <button class="primary-btn" onclick="goToAppointments()">📄 My Appointments</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- NAVBAR -->
+<div class="bottom-nav">
+    <button class="active">Home</button>
+    <button onclick="goToBook()">Book</button>
+    <button onclick="goToAppointments()">Appointments</button>
+</div>
+
+</div>
+
+<script src="../js/patient.js"></script>
+
+</body>
+</html>

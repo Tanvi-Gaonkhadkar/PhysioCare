@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patients</title>
+<link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+<header class="header">
+    👥 Patients
+</header>
+
+<div class="container">
+
+    <!-- LEFT SIDE (FILTER + LIST COMBINED 🔥) -->
+    <div class="left-section">
+
+        <div class="card">
+
+            <!-- Filters -->
+            <div class="filter-container">
+                <button class="filter-btn active" onclick="setActiveButton(this); displayPatients('all')">All</button>
+                <button class="filter-btn" onclick="setActiveButton(this); displayPatients('active')">Active</button>
+                <button class="filter-btn" onclick="setActiveButton(this); displayPatients('new')">New</button>
+                <button class="filter-btn" onclick="setActiveButton(this); displayPatients('recovered')">Recovered</button>
+            </div>
+
+            <!-- Patient List -->
+            <h3 style="margin-top: 20px;">Patient List</h3>
+            <div id="patientList"></div>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE (ADD PATIENT) -->
+    <div class="card">
+        <h3>Add Patient</h3>
+
+        <input type="text" placeholder="Name" class="input" id="name">
+        <input type="number" placeholder="Age" class="input" id="age">
+        <input type="text" placeholder="Phone" class="input" id="phone">
+
+        <select class="input" id="status">
+            <option value="active">Active</option>
+            <option value="new">New</option>
+            <option value="recovered">Recovered</option>
+        </select>
+
+        <button class="primary-btn" onclick="addPatient()">Add Patient</button>
+    </div>
+
+</div>
+
+<!-- Bottom Navigation -->
+<div class="bottom-nav">
+    <button onclick="goHome()">Home</button>
+    <button onclick="goToAppointments()">Appointments</button>
+    <button class="active">Patients</button>
+</div>
+
+</div>
+
+<script src="../js/doctor.js"></script>
+
+</body>
+</html>

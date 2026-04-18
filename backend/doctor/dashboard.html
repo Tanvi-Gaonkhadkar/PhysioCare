@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doctor Dashboard</title>
+<link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+<header class="header">
+    👋 Dashboard
+</header>
+
+<div class="container dashboard-container">
+
+    <div class="card stat-card">
+        <h3>Today's Appointments</h3>
+        <p class="big-text">5</p>
+    </div>
+
+    <div class="card stat-card">
+        <h3>Active Patients</h3>
+    </div>
+
+    <div class="card stat-card">
+        <h3>Next Appointment</h3>
+        <p style="color:#777; font-size: 1.1rem; margin-top: 20px;">No upcoming appointments</p>
+    </div>
+
+    <div class="action-row">
+        <button class="primary-btn dashboard-btn" onclick="goToPatients()">➕ Add Patient</button>
+        <button class="primary-btn dashboard-btn" onclick="goToAppointments()">➕ Add Appointment</button>
+    </div>
+
+</div>
+
+<!-- Bottom Navigation -->
+<div class="bottom-nav">
+    <button style="color:#2aa7a0;">Home</button>
+    <button onclick="goToAppointments()">Appointments</button>
+    <button onclick="goToPatients()">Patients</button>
+</div>
+
+</div>
+
+<script src="../js/doctor.js"></script>
+
+</body>
+</html>

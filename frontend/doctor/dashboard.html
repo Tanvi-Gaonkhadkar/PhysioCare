@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- HEADER -->
+    <header class="header">
+        👋 Dashboard
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+
+        <!-- 🔥 TOP 3 CARDS -->
+        <div class="cards-row">
+
+            <div class="card stat-card">
+                <h3>Today's Appointments</h3>
+                <p class="big-text" id="totalCount">0</p>
+            </div>
+
+            <div class="card stat-card">
+                <h3>Active Patients</h3>
+                <p class="big-text" id="patientCount">0</p>
+            </div>
+
+            <div class="card stat-card">
+                <h3>Next Appointment</h3>
+                <p id="upcomingAppointment" style="color:#777;">
+                    No upcoming appointments
+                </p>
+            </div>
+
+        </div>
+
+        <!-- 🔥 BUTTONS BELOW -->
+        <div class="buttons-row">
+            <button class="primary-btn" onclick="goToPatients()">➕ Add Patient</button>
+            <button class="primary-btn" onclick="goToAppointments()">➕ Add Appointment</button>
+        </div>
+
+    </div>
+
+    <!-- BOTTOM NAV -->
+    <div class="bottom-nav">
+        <button class="active">Home</button>
+        <button onclick="goToAppointments()">Appointments</button>
+        <button onclick="goToPatients()">Patients</button>
+    </div>
+
+</div>
+
+<script src="../js/doctor.js"></script>
+
+</body>
+</html>

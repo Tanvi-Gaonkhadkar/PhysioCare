@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+
+<link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+<div class="login-container">
+    <div class="login-card">
+        <h2>Welcome 👋</h2>
+        <p>Please login to continue</p>
+
+        <!-- ✅ Role Selection -->
+        <div class="role-select">
+            <button type="button" onclick="selectRole('doctor')" id="doctorBtn">Doctor</button>
+            <button type="button" onclick="selectRole('patient')" id="patientBtn">Patient</button>
+        </div>
+
+        <!-- Inputs -->
+        <input type="text" placeholder="Email" class="input">
+        <input type="password" placeholder="Password" class="input">
+
+        <!-- Login -->
+        <button type="button" class="primary-btn" onclick="login()">Login</button>
+    </div>
+</div>
+
+<script src="js/auth.js"></script>
+
+</body>
+</html>
